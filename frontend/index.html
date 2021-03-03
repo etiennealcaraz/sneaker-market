@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Tairong">
+<style>
+body, h1 {font-family: "Audiowide", sans-serif}
+body, p {font-family: "Tairong", sans-serif}
+body, html {height: 100%}
+</style>
+<body>
+
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <a href="index.html" class="w3-button w3-bar-item">Home</a>
+  <a href="#about" class="w3-button w3-bar-item">About</a>
+  <a href="bid.html" class="w3-button w3-bar-item">Bid</a>
+  <a href="admin.html" class="w3-button w3-bar-item">Register</a>
+</nav>
+
+<!-- Header -->
+<header class="w3-display-container w3-display-topright w3-padding-36 w3-black w3-xlarge top-social">
+  <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+  <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+  <a href="https://www.snapchat.com"><i class="fa fa-snapchat"></i></a>
+  <a href="https://www.pinterest.com"><i class="fa fa-pinterest"></i></a>
+  <a href="https://telegram.org"><i class="fa fa-telegram"></i></a>
+</header>
+
+<!-- Slide Show -->
+<section>
+  <img class="mySlides" src="./frontend/img/shoe.jpg"
+  style="width:100%">
+  <img class="mySlides" src="./frontend/img/sneaker_market.jpg"
+  style="width:100%">
+  <img class="mySlides" src="./frontend/img/tech.jpg"
+  style="width:100%">
+</section>
+
+<section class="w3-container w3-animate-opacity w3-text-sand w3-display-middle w3-bold">
+  <h1 class="w3-jumbo w3-animate-top">Kick Auction Xchange</h1>
+  <hr class="w3-border-grey" style="margin:auto;width:50%">
+  <p class="w3-xxlarge w3-center">&#128142 &#129508 &#128640 &#127765</p>
+  <p class="w3-xlarge w3-center">World's largest decentralized collectible sneaker auction market</p>
+</section>
+
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+
+</body>
+</html>
