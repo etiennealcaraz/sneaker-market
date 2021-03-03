@@ -1,0 +1,108 @@
+Feature,Feature Importances
+release_date,0.19641457874929652
+brand_ Yeezy,0.15786156037092852
+brand_Off-White,0.14109099571810702
+sneaker_name_Air-Jordan-1-Retro-High-Off-White-Chicago,0.1366357103376206
+order_date,0.12483177698891153
+sneaker_name_Air-Jordan-1-Retro-High-Off-White-White,0.06848167942252427
+retail_price,0.03393869232259703
+shoe_size,0.030886961337469373
+sneaker_name_Nike-Air-Presto-Off-White,0.020998751666853367
+sneaker_name_adidas-Yeezy-Boost-350-V2-Static-Reflective,0.014841218437770221
+sneaker_name_Air-Jordan-1-Retro-High-Off-White-University-Blue,0.010838251337045645
+sneaker_name_Nike-Zoom-Fly-Off-White-Pink,0.009965761109135397
+sneaker_name_Nike-Zoom-Fly-Off-White-Black-Silver,0.007948532967746638
+sneaker_name_Adidas-Yeezy-Boost-350-V2-Beluga-2pt0,0.005361373909279933
+sneaker_name_Adidas-Yeezy-Boost-350-V2-Cream-White,0.005206857126519455
+sneaker_name_Nike-Air-Force-1-Low-Off-White-Volt,0.004192666720856754
+sneaker_name_Nike-Air-Presto-Off-White-White-2018,0.003734317919088933
+sneaker_name_Adidas-Yeezy-Boost-350-V2-Blue-Tint,0.003077998155284449
+sneaker_name_Adidas-Yeezy-Boost-350-Low-Turtledove,0.002877375650878025
+sneaker_name_Nike-Air-VaporMax-Off-White,0.002136631114195718
+sneaker_name_Adidas-Yeezy-Boost-350-V2-Zebra,0.001554260343147213
+sneaker_name_Nike-Air-Presto-Off-White-Black-2018,0.0015448403921816643
+sneaker_name_Adidas-Yeezy-Boost-350-V2-Core-Black-Red,0.0014205670068304912
+sneaker_name_Nike-Zoom-Fly-Off-White,0.0013024556957133677
+sneaker_name_Nike-Zoom-Fly-Mercurial-Off-White-Total-Orange,0.0009538514061514955
+sneaker_name_Adidas-Yeezy-Boost-350-V2-Semi-Frozen-Yellow,0.0008204925922767879
+buyer_region_New York,0.0007330866996503703
+sneaker_name_Nike-Zoom-Fly-Mercurial-Off-White-Black,0.0007254553664936261
+sneaker_name_adidas-Yeezy-Boost-350-V2-Butter,0.00062602299436959
+buyer_region_California,0.0005806916080874464
+sneaker_name_Nike-Blazer-Mid-Off-White-All-Hallows-Eve,0.000496712403456857
+sneaker_name_Nike-Air-Force-1-Low-Off-White,0.00046836998399538295
+buyer_region_Florida,0.00037267830815803185
+sneaker_name_Nike-Blazer-Mid-Off-White-Wolf-Grey,0.0003517683432880234
+sneaker_name_Adidas-Yeezy-Boost-350-V2-Core-Black-Red-2017,0.00033536163990775147
+buyer_region_Texas,0.0003285467321398573
+sneaker_name_Nike-Air-Force-1-Low-Virgil-Abloh-Off-White-AF100,0.0003197399366046826
+sneaker_name_adidas-Yeezy-Boost-350-V2-Static,0.00029479922077553267
+sneaker_name_Nike-React-Hyperdunk-2017-Flyknit-Off-White,0.00029198760894268003
+buyer_region_New Jersey,0.0002826114539272428
+buyer_region_Oregon,0.00027262174545570467
+sneaker_name_Adidas-Yeezy-Boost-350-Low-V2-Beluga,0.00025997328273675847
+buyer_region_Kentucky,0.00022379661589745493
+sneaker_name_Nike-Air-VaporMax-Off-White-2018,0.00020749153882321234
+buyer_region_Massachusetts,0.00020624104555911347
+buyer_region_Michigan,0.00020405787526405798
+buyer_region_Arizona,0.0001913031333352081
+sneaker_name_Nike-Blazer-Mid-Off-White,0.00018205691853832856
+buyer_region_Georgia,0.0001788729611766543
+sneaker_name_Adidas-Yeezy-Boost-350-V2-Core-Black-Green,0.00017342188893134216
+buyer_region_Illinois,0.0001612530812860317
+buyer_region_Pennsylvania,0.00014969712643864055
+sneaker_name_Nike-Air-Max-90-Off-White,0.000120619443958054
+sneaker_name_Adidas-Yeezy-Boost-350-V2-Core-Black-White,0.00011915528400859506
+sneaker_name_Nike-Air-Max-97-Off-White-Elemental-Rose-Queen,0.00011193976712081683
+buyer_region_Virginia,0.00011192451202056226
+buyer_region_Ohio,0.00010830526787845409
+buyer_region_Maryland,9.976510519484294e-05
+buyer_region_Washington,9.354144632673789e-05
+buyer_region_Utah,8.706207282805332e-05
+sneaker_name_Nike-Air-Max-97-Off-White-Menta,8.458946763517705e-05
+sneaker_name_Adidas-Yeezy-Boost-350-V2-Sesame,8.374923735347158e-05
+sneaker_name_Adidas-Yeezy-Boost-350-V2-Core-Black-Copper,8.313646599665583e-05
+buyer_region_Indiana,8.010529497163591e-05
+sneaker_name_Nike-Air-Max-97-Off-White,7.986854570004115e-05
+buyer_region_Wisconsin,7.626888274782014e-05
+buyer_region_Delaware,7.511735217926792e-05
+sneaker_name_Nike-Air-Max-97-Off-White-Black,7.110271963855045e-05
+buyer_region_North Carolina,6.559508629747441e-05
+buyer_region_Missouri,5.738982040544569e-05
+buyer_region_Colorado,5.728680980552812e-05
+sneaker_name_Nike-Air-VaporMax-Off-White-Black,5.180412581145331e-05
+buyer_region_Nevada,4.9116486803662134e-05
+buyer_region_Connecticut,4.9082912624218576e-05
+sneaker_name_Adidas-Yeezy-Boost-350-Low-Pirate-Black-2015,4.894042927436884e-05
+sneaker_name_Nike-Blazer-Mid-Off-White-Grim-Reaper,4.7975556575241394e-05
+buyer_region_Nebraska,4.414837816201229e-05
+buyer_region_Iowa,4.258474564106849e-05
+buyer_region_South Carolina,3.558544225133833e-05
+buyer_region_Minnesota,3.542798492018475e-05
+buyer_region_Hawaii,3.499956046995719e-05
+buyer_region_New Mexico,3.121914760174372e-05
+sneaker_name_Nike-Air-Max-90-Off-White-Black,3.1071137658645375e-05
+buyer_region_Louisiana,2.6284391991112903e-05
+buyer_region_Tennessee,2.597217870257836e-05
+sneaker_name_Adidas-Yeezy-Boost-350-Low-Oxford-Tan,2.5315745596704627e-05
+sneaker_name_Adidas-Yeezy-Boost-350-Low-Pirate-Black-2016,2.5180022803092174e-05
+sneaker_name_Adidas-Yeezy-Boost-350-Low-Moonrock,2.510244850398026e-05
+sneaker_name_Nike-Air-Force-1-Low-Off-White-Black-White,2.1446308003324425e-05
+buyer_region_Oklahoma,2.0989203142887208e-05
+buyer_region_Kansas,1.7852895093238937e-05
+buyer_region_District of Columbia,1.66552244761363e-05
+buyer_region_Rhode Island,1.5266467615932456e-05
+buyer_region_Alabama,1.393495298831306e-05
+sneaker_name_Nike-Air-Max-90-Off-White-Desert-Ore,1.342833263052209e-05
+buyer_region_Arkansas,9.907378804369454e-06
+buyer_region_New Hampshire,8.08237625412241e-06
+buyer_region_Vermont,5.475599908990876e-06
+buyer_region_Maine,4.77338533890884e-06
+buyer_region_West Virginia,4.185298774482712e-06
+buyer_region_Idaho,3.922358465478508e-06
+buyer_region_Mississippi,3.6825574427913284e-06
+buyer_region_South Dakota,1.6403007970542175e-06
+buyer_region_Alaska,1.591297982477713e-06
+buyer_region_North Dakota,1.383595692931061e-06
+buyer_region_Wyoming,1.3409337105270123e-06
+buyer_region_Montana,1.3299437690797653e-06
