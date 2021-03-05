@@ -1,4 +1,4 @@
-import marsfrom "./build/contracts/SneakerMarket.json";
+import marsJson from "./build/contracts/SneakerMarket.json";
 import auctionJson from "./build/contracts/SneakerAuction.json";
 
 const Web3 = require("web3");
