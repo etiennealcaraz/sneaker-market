@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "parcel -d build/frontend index.html",
-    "build": "parcel build -d build/frontend --public-url /sneaker-market/ sneaker-market/ index.html",
+    "build": "parcel build -d build/frontend --public-url /sneaker-market/ index.html",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build/frontend",
     "prepush": "npm run deploy",
