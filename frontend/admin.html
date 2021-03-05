@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha256-OweaP/Ic6rsV+lysfyS4h+LM6sRwuO3euTYfr6M124g=" crossorigin="anonymous" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Tairong">
+<style>
+body, h1 {font-family: "Audiowide", sans-serif}
+body, p {font-family: "Tairong", sans-serif}
+body, html {height: 100%}
+h1   {color: blue;}
+p    {color: firebrick;}
+</style>
+<body>
+
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <a href="index.html" class="w3-button w3-bar-item">Home</a>
+  <a href="#about" class="w3-button w3-bar-item">About</a>
+  <a href="bid.html" class="w3-button w3-bar-item">Bid</a>
+  <a href="admin.html" class="w3-button w3-bar-item">Register</a>
+</nav>
+
+<body class="lime lighten-5">
+
+  <div class="container" style="text-align: center">
+
+    <h1>Kick Auction Xchange</h1>
+    <div class="col s12 m6 dapp-admin">
+      <div class="card grey darken-3">
+        <div class="card-content white-text">
+          <span class="card-title"><input id="dapp-register-name" placeholder="Sneaker name..." /></span>
+          <span class="card-title"><input id="dapp-register-brand" placeholder="Sneaker brand..." /></span>
+          <span class="card-title"><input id="dapp-register-color" placeholder="Sneaker color..." /></span>
+          <p>Image: <input id="dapp-copyright-image" type="file" /></p>
+
+          <p><input id="dapp-pinata-api-key" placeholder="Pinata API Key"/></p>
+          <p><input id="dapp-pinata-secret-api-key" placeholder="Pinata Secret API Key" type="password" /></p>
+          <p>Note: Pinata requests are done locally via your browser. Your keys are not shared with any party except Pinata.</p>
+          <br/>
+        </div>
+        <div class="card-action">
+          <a id="dapp-register" href="#" onclick="dApp.registerKick()">Register the sneaker</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JQuery 3.4.1 slim minified -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript for Materialize CSS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha256-U/cHDMTIHCeMcvehBv1xQ052bPSbJtbuiw4QA9cTKz0=" crossorigin="anonymous"></script>
+  <!-- Web3.js -->
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.2.5-rc.0/dist/web3.min.js" integrity="sha256-ZjUHyLZZWkQPbWfRjTSmGtfcTSOermVT6f/CvJW2RY4=" crossorigin="anonymous"></script>
+  <!-- dApp JavaScript -->
+  <script src="dapp.js"></script>
+
+</body>
+</html>
