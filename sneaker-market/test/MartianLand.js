@@ -1,11 +1,11 @@
-const MartianMarket = artifacts.require("MartianMarket");
+const SneakerMarket = artifacts.require("SneakerMarket");
 
-contract("Martian land token", accounts => {
+contract("Shoe token", accounts => {
   it("Token metadata should be correct", async () => {
-    let contract = await MartianMarket.deployed();
+    let contract = await SneakerMarket.deployed();
     let name = await contract.name();
     let symbol = await contract.symbol();
-    assert.equal(name, "MartianMarket");
-    assert.equal(symbol, "MARS");
+    assert.equal(name, "SneakerMarket");
+    assert.equal(symbol, "Shoe");
   });
 });
