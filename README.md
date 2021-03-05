@@ -88,7 +88,6 @@ Accuracy: 97.14%
 ---
 ## Initial Coin Offering (ICO)
 
-
 ---
 ## Demo 
 
