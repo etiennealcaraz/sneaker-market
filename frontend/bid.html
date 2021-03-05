@@ -3,34 +3,40 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha256-OweaP/Ic6rsV+lysfyS4h+LM6sRwuO3euTYfr6M124g=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Tairong">
 <style>
 body, h1 {font-family: "Audiowide", sans-serif}
 body, p {font-family: "Tairong", sans-serif}
 body, html {height: 100%}
-body {background-color: red;}
 h1   {color: blue;}
 p    {color: red;}
+p2   {color: white;}
 </style>
 <body>
 
-<!-- Navigation -->
-<nav class="w3-bar w3-black">
+<!-- Header -->
+<header class="w3-bar w3-black">
   <a href="index.html" class="w3-button w3-bar-item">Home</a>
   <a href="#about" class="w3-button w3-bar-item">About</a>
   <a href="bid.html" class="w3-button w3-bar-item">Bid</a>
-  <a href="admin.html" class="w3-button w3-bar-item">Register</a>
-</nav>
+</header>
 
-<body class="grey lighten-3">
+<header class="w3-display-topright w3-xlarge top-social">
+  <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+  <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+  <a href="https://www.snapchat.com"><i class="fa fa-snapchat"></i></a>
+  <a href="https://www.pinterest.com"><i class="fa fa-pinterest"></i></a>
+  <a href="https://telegram.org"><i class="fa fa-telegram"></i></a>
+</header>
+
+<body class="lime lighten-5">
 
   <div class="container" style="text-align: center">
 
-    <h3>MartianMarket</h3>
-    <p>Welcome to the Martian Land Foundation's open marketplace. This market serves to raise funds for the Mars development project
-      by auctioning land to the masses.
-    </p>
+    <h1>Kick Auction Xchange</h1>
     <div id="dapp-tokens" class="row">
       <div class="card">
         <div class="card-image">
@@ -56,7 +62,7 @@ p    {color: red;}
           <br/>
         </div>
         <div class="card-action">
-          <a id="dapp-register" href="#" onclick="dApp.registerLand()">Register Land</a>
+          <a id="dapp-register" href="#" onclick="dApp.registerKick()">Register your sneaker</a>
         </div>
       </div>
     </div>

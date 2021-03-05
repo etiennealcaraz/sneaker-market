@@ -1,7 +1,9 @@
-const contractAddress = "0x7Ca912e78073B23cfFC65511b17A3206B781b8D3"; // insert KickMarket contract address here
+// @TODO: Update this address to match your deployed MartianMarket contract!
+const contractAddress = "0xe9ad385639C3050Db9C4d36eaffEE87c1dFBAAD9";
 
 const dApp = {
   ethEnabled: function() {
+    // If the browser has an Ethereum provider (MetaMask) installed
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum);
       window.ethereum.enable();
@@ -10,37 +12,37 @@ const dApp = {
     return false;
   },
   collectVars: async function() {
-    // get kick tokens
+    // get land tokens
     this.tokens = [];
-    this.totalSupply = await this.kickContract.methods.totalSupply().call();
-    
+    this.totalSupply = await this.marsContract.methods.totalSupply().call();
+
     // fetch json metadata from IPFS (name, description, image, etc)
     const fetchMetadata = (reference_uri) => fetch(`https://gateway.pinata.cloud/ipfs/${reference_uri.replace("ipfs://", "")}`, { mode: "cors" }).then((resp) => resp.json());
-    
-    for (let i = 0; i < this.totalSupply; i++) {
+
+    for (let i = 1; i <= this.totalSupply; i++) {
       try {
-        const token_uri = await this.kickContract.methods.tokenURI(i).call();
+        const token_uri = await this.marsContract.methods.tokenURI(i).call();
         console.log('token uri', token_uri)
         const token_json = await fetchMetadata(token_uri);
-        console.log('token json', token_json)   
+        console.log('token json', token_json)
         this.tokens.push({
           tokenId: i,
-          highestBid: Number(await this.kickContract.methods.highestBid(i).call()),
-          auctionEnded: Boolean(await this.kickContract.methods.auctionEnded(i).call()),
-          pendingReturn: Number(await this.kickContract.methods.pendingReturn(i, this.accounts[0]).call()),
+          highestBid: Number(await this.marsContract.methods.highestBid(i).call()),
+          auctionEnded: Boolean(await this.marsContract.methods.auctionEnded(i).call()),
+          pendingReturn: Number(await this.marsContract.methods.pendingReturn(i, this.accounts[0]).call()),
           auction: new window.web3.eth.Contract(
             this.auctionJson,
-            await this.kickContract.methods.getAuction(i).call(),
+            await this.marsContract.methods.auctions(i).call(),
             { defaultAccount: this.accounts[0] }
           ),
-          owner: await this.kickContract.methods.ownerOf(i).call(),
+          owner: await this.marsContract.methods.ownerOf(i).call(),
           ...token_json
         });
       } catch (e) {
-          console.log(JSON.stringify(e));
-        }
+        console.log(JSON.stringify(e));
       }
-    },
+    }
+  },
   setAdmin: async function() {
     // if account selected in MetaMask is the same as owner then admin will show
     if (this.isAdmin) {
@@ -53,7 +55,7 @@ const dApp = {
     console.log("updating UI");
     // refresh variables
     await this.collectVars();
-   
+
     $("#dapp-tokens").html("");
     this.tokens.forEach((token) => {
       try {
@@ -90,15 +92,14 @@ const dApp = {
   bid: async function(event) {
     const tokenId = $(event.target).attr("token-id");
     const wei = Number($(event.target).prev().val());
-    await this.kickContract.methods.bid(tokenId).send({from: this.accounts[0], value: wei}).on("receipt", async (receipt) => {
+    await this.marsContract.methods.bid(tokenId).send({from: this.accounts[0], value: wei}).on("receipt", async (receipt) => {
       M.toast({ html: "Transaction Mined! Refreshing UI..." });
       await this.updateUI();
     });
-
   },
   endAuction: async function(event) {
     const tokenId = $(event.target).attr("token-id");
-    await this.kickContract.methods.endAuction(tokenId).send({from: this.accounts[0]}).on("receipt", async (receipt) => {
+    await this.marsContract.methods.endAuction(tokenId).send({from: this.accounts[0]}).on("receipt", async (receipt) => {
       M.toast({ html: "Transaction Mined! Refreshing UI..." });
       await this.updateUI();
     });
@@ -112,13 +113,12 @@ const dApp = {
   },
   registerKick: async function() {
     const name = $("#dapp-register-name").val();
-    const brand = $("#dapp-register-brand").val();
     const image = document.querySelector('input[type="file"]');
 
     const pinata_api_key = $("#dapp-pinata-api-key").val();
     const pinata_secret_api_key = $("#dapp-pinata-secret-api-key").val();
 
-    if (!pinata_api_key || !pinata_secret_api_key || !name || !brand || !image) {
+    if (!pinata_api_key || !pinata_secret_api_key || !name || !image) {
       M.toast({ html: "Please fill out then entire form!" });
       return;
     }
@@ -146,7 +146,7 @@ const dApp = {
       M.toast({ html: "Uploading JSON..." });
 
       const reference_json = JSON.stringify({
-        pinataContent: { name, brand, image: image_uri },
+        pinataContent: { name, image: image_uri },
         pinataOptions: {cidVersion: 1}
       });
 
@@ -167,10 +167,9 @@ const dApp = {
       M.toast({ html: `Success. Reference URI located at ${reference_uri}.` });
       M.toast({ html: "Sending to blockchain..." });
 
-      await this.kickContract.methods.registerKick(reference_uri).send({from: this.accounts[0]}).on("receipt", async (receipt) => {
+      await this.marsContract.methods.registerKick(reference_uri).send({from: this.accounts[0]}).on("receipt", async (receipt) => {
         M.toast({ html: "Transaction Mined! Refreshing UI..." });
         $("#dapp-register-name").val("");
-        $("#dapp-register-brand").val();
         $("#dapp-register-image").val("");
         await this.updateUI();
       });
@@ -188,17 +187,17 @@ const dApp = {
     this.accounts = await window.web3.eth.getAccounts();
     this.contractAddress = contractAddress;
 
-    this.kickJson = await (await fetch("./kickMarket.json")).json();
-    this.auctionJson = await (await fetch("./kickAuction.json")).json();
+    this.marsJson = await (await fetch("./KickMarket.json")).json();
+    this.auctionJson = await (await fetch("./KickAuction.json")).json();
 
-    this.kickContract = new window.web3.eth.Contract(
-      this.kickJson,
+    this.marsContract = new window.web3.eth.Contract(
+      this.marsJson,
       this.contractAddress,
       { defaultAccount: this.accounts[0] }
     );
-    console.log("Contract object", this.kickContract);
+    console.log("Contract object", this.marsContract);
 
-    this.isAdmin = this.accounts[0] == await this.kickContract.methods.owner().call();
+    this.isAdmin = this.accounts[0] == await this.marsContract.methods.owner().call();
 
     await this.updateUI();
   }
