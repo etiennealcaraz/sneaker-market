@@ -67,10 +67,14 @@ Accuracy: 97.14%
 
 ---
 ## Development Platforms
-![pinata](images/pinata.png)
-![metamask](images/metamask.png)
-![python](images/python.jpeg)
+![ethereum](images/ethereum.png)
+![infura](images/infura.png)
 ![jupyterlab](images/jupyterlab.png)
+![metamask](images/metamask.png)
+![pinata](images/pinata.png)
+![python](images/python.jpeg)
+![remix](images/remix.png)
+![solity](images/solidity.png)
 
 ---
 ## Blockchain Technology
@@ -79,10 +83,11 @@ Accuracy: 97.14%
 ## Smart Contracts
 
 ---
-## Digital Tokens - Non-Fungible Tokens(NFT)
+## Digital Tokens - Non-Fungible Tokens (NFT)
 
 ---
 ## Initial Coin Offering (ICO)
+
 
 ---
 ## Demo 
@@ -96,6 +101,7 @@ Accuracy: 97.14%
 
 ---
 ## Resources
-- [StockX Data Contest](https://stockx.com/news/the-2019-data-contest/)
 - [Random Forest Regression](MarketAnalysis/notebooks/Random_Forest_Regression.ipynb)
 - [Sneakers Analysis](MarketAnalysis/notebooks/Sneakers_Data_Analysis.ipynb)
+- [StockX Data Contest](https://stockx.com/news/the-2019-data-contest/)
+
