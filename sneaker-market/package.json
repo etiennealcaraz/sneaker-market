@@ -1,14 +1,14 @@
 {
-  "name": "martian-market",
+  "name": "sneaker-market",
   "version": "1.0.0",
-  "description": "A decentralized Martian Land Market",
+  "description": "A decentralized Sneaker Market",
   "main": " ",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "dev": "parcel -d build/frontend index.html",
-    "build": "parcel build -d build/frontend --public-url /martian-market/ index.html",
+    "build": "parcel build -d build/frontend --public-url /sneaker-market/ index.html",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build/frontend",
     "prepush": "npm run deploy",
