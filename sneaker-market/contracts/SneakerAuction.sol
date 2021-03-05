@@ -1,6 +1,6 @@
 pragma solidity ^0.6.0;
 
-contract MartianAuction {
+contract SneakerAuction {
     address payable public beneficiary;
 
     // Current state of the auction.
