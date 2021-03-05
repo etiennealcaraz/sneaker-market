@@ -83,7 +83,7 @@ Accuracy: 97.14%
 
 ---
 ## Initial Coin Offering (ICO)
-- An Inital Coin Offering is essentially the stocks market's Initial Public Offering (IPO) in the cryptocurrency world. In other words, companies utilize ICO to raise money so that they have the capital to create new cryptocurrencies, softwares, or services. Similar to issuing debt and stocks, interested investors will receive a new cryptocurrency token issued by the company after credit the company with their resources. While the token represents the partial interests in the company, the token given by the company may be consumed or used in the products or services provided by the company. And this is one of the differences between the ICOs and IPOs, which is that a stock simply represents a certain portion you own of a company, whereas a token from an ICO could be used to exchange for products or services presented by the company.
+
 ---
 ## Demo 
 
