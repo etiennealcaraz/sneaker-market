@@ -1,5 +1,4 @@
-// @TODO: Update this address to match your deployed MartianMarket contract!
-const contractAddress = "0xe9ad385639C3050Db9C4d36eaffEE87c1dFBAAD9";
+const contractAddress = "0xDBB37185C98B789Fc7Fa9Fbe2115819AB89A6306";
 
 const dApp = {
   ethEnabled: function() {
@@ -12,7 +11,6 @@ const dApp = {
     return false;
   },
   collectVars: async function() {
-    // get land tokens
     this.tokens = [];
     this.totalSupply = await this.marsContract.methods.totalSupply().call();
 
@@ -69,10 +67,10 @@ const dApp = {
               <div class="card">
                 <div class="card-image">
                   <img id="dapp-image" src="https://gateway.pinata.cloud/ipfs/${token.image.replace("ipfs://", "")}">
-                  <span id="dapp-name" class="card-title">${token.name}</span>
+                  <span id="dapp-name" class="card-title red-text">${token.name}</span>
                 </div>
                 <div class="card-action">
-                  <input type="number" min="${token.highestBid + 1}" name="dapp-wei" value="${token.highestBid + 1}" ${token.auctionEnded ? 'disabled' : ''}>
+                  <input type="number" min="${token.highestBid + 10000}" name="dapp-wei" value="${token.highestBid + 10000}" ${token.auctionEnded ? 'disabled' : ''}>
                   ${token.auctionEnded ? owner : bid}
                   ${token.pendingReturn > 0 ? withdraw : ''}
                   ${token.pendingReturn > 0 ? pendingWithdraw : ''}
@@ -113,12 +111,13 @@ const dApp = {
   },
   registerKick: async function() {
     const name = $("#dapp-register-name").val();
+    const size = $("#dapp-register-size").val();
     const image = document.querySelector('input[type="file"]');
 
     const pinata_api_key = $("#dapp-pinata-api-key").val();
     const pinata_secret_api_key = $("#dapp-pinata-secret-api-key").val();
 
-    if (!pinata_api_key || !pinata_secret_api_key || !name || !image) {
+    if (!pinata_api_key || !pinata_secret_api_key || !name || !size|| !image) {
       M.toast({ html: "Please fill out then entire form!" });
       return;
     }
@@ -146,7 +145,7 @@ const dApp = {
       M.toast({ html: "Uploading JSON..." });
 
       const reference_json = JSON.stringify({
-        pinataContent: { name, image: image_uri },
+        pinataContent: { name, size, image: image_uri },
         pinataOptions: {cidVersion: 1}
       });
 
@@ -170,6 +169,7 @@ const dApp = {
       await this.marsContract.methods.registerKick(reference_uri).send({from: this.accounts[0]}).on("receipt", async (receipt) => {
         M.toast({ html: "Transaction Mined! Refreshing UI..." });
         $("#dapp-register-name").val("");
+        $("#dapp-register-size").val("");
         $("#dapp-register-image").val("");
         await this.updateUI();
       });

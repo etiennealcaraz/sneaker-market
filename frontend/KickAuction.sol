@@ -3,8 +3,7 @@ pragma solidity >=0.4.22 <0.6.0;
 contract KickAuction {
     address deployer;
     address payable public beneficiary;
-    address payable xchange = msg.sender;
-
+    
     // Current state of the auction
     address public highestBidder;
     uint public highestBid;
@@ -96,7 +95,6 @@ contract KickAuction {
         emit AuctionEnded(highestBidder, highestBid);
 
         // 3. Interaction
-        beneficiary.transfer(highestBid*90/100);
-        xchange.transfer(highestBid*10/100);
+        beneficiary.transfer(highestBid);
     }
 }
